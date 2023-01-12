@@ -47,7 +47,7 @@ if([...email].filter(i=> i === '&').length !== 1){
       <h2>Sign Up!</h2>
       <label htmlFor='email'>Email</label>
       <input
-        type='text' name='email' id="tes"
+        type='text' name='email' id="test"
         onChange={e => setEmail(e.target.value)}
       />
       <label htmlFor='password'>Password</label>
