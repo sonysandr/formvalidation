@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import TextField from '@mui/material/TextField';
+// Text field is a part of material ui
 
 export default function FormValidator () {
   const [email, setEmail] = useState('')
@@ -45,23 +47,42 @@ if([...email].filter(i=> i === '&').length !== 1){
   return (
     <form onSubmit={onSubmitHandler}>
       <h2>Sign Up!</h2>
+      
       <label htmlFor='email'>Email</label>
-      <input
-        type='text' name='email' id="test"
-        onChange={e => setEmail(e.target.value)}
+      <TextField 
+      id="outlined-basic" 
+      label="Email" 
+      variant="outlined" 
+      type='text' 
+      name='email' 
+      onChange={e => setEmail(e.target.value)}
       />
+      
       <label htmlFor='password'>Password</label>
-      <input
-        type='password' name='password'
-        onChange={e => setPassword(e.target.value)}
+
+      <TextField 
+      id="outlined-basic" 
+      label="Password" 
+      variant="outlined" 
+      type='password' 
+      name='password'
+      onChange={e => setPassword(e.target.value)}
       />
+      
       <label htmlFor='password-confirm'>Confirm Password </label>
+      <TextField 
+      id="outlined-basic" 
+      label="Confirm Password" 
+      variant="outlined" 
+      type='password' 
+      name='password-confirm'
+      onChange={e => setPasswordConfirm(e.target.value)}
+      />
       <input
-        type='password' name='password-confirm'
-        onChange={e => setPasswordConfirm(e.target.value)}
+        
       />
       {message}
-      <input type='submit' value='Submit'/>
+      
     </form>
   )
 }
