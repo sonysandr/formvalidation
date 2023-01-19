@@ -56,7 +56,7 @@ export default function LoggedUserPage() {
   return (
     <>
       <div className="Weather">
-        <h1>You are now Logged in</h1>
+        <h1>You are now Logged in q</h1>
 
         {/* always imp to use a condtional operator here*/}
         {/* DisplayWeather component used to display weather */}
