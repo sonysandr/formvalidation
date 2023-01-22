@@ -4,12 +4,13 @@ import "./LoggedUserPage.css";
 import Button from "@mui/material/Button";
 
 
+
 const baseUrl =
   "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=696606efa0d387803b2f600dd5ebaca1";
 
 // we need a function to fetch from api
 const getWeather = async () => {
-  const response = await fetch(baseUrl);
+  const response = await fetch(baseUrl); //axios.get replace fetch
   const temp = await response.json();
   return temp;
 };
